@@ -8,6 +8,8 @@
 
 #### Follow the steps there, and run the NinJump.cpp file from bin folder.
 
+### We can directly run the NinJump.exe file from DosBox as well.
+
 #### Try making your own games. 
 
 #### Enjoy!
