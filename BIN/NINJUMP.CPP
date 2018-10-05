@@ -1,3 +1,7 @@
+/*
+  Author : Parampreet Singh
+  Organization : Chinar Public School
+*/
 #include<iostream.h>
 #include<conio.h>
 #include<graphics.h>
@@ -6,98 +10,69 @@
 #include<malloc.h>
 
 void j_ninja(int xm,int ym,int make,int o)
-{ int r=10,col,scol;
-
-  if(make==1)
-   {col=0;scol=8;}
-    else
-     {col=7;scol=7;}
-   if((o=='s')||(o=='S'))
-
-     { //head
-
-       setcolor(col);
-       circle(xm-4,ym,r);
-       setfillstyle(1,col);
-       floodfill(xm,ym,col);
-
-      //body
-
-       line(xm,ym+r,xm+17,ym+r+30);
-       line(xm+1,ym+r+1,xm+17+1,ym+r+30+1);
-
-      //left leg
-
-       line(xm+17,ym+r+30,xm+25,ym+r+42);
-       line(xm+25,ym+r+42,xm+34,ym+60);
-
-      //right leg
-
-       line(xm+17,ym+r+30,xm-6,ym+r+29);
-       line(xm-6,ym+r+29,xm-17,ym+48);
-
-      //right hand
-
-	line(xm+3,ym+20,xm-7,ym+25);
-	line(xm-7,ym+25,xm-18,ym+16);
-
-      //left hand
-       line(xm+3,ym+20,xm+25,ym+28);
-
-      //sword
-       setcolor(scol);
-
-	line(xm+25,ym+28,xm+24,ym+30);
-	line(xm+25,ym+28,xm+36,ym+50);
-	line(xm+24,ym+30,xm+35,ym+52);
-	line(xm+36,ym+50,xm+35,ym+53);
-
+{ 
+  int r=10,col,scol;
+  if(make==1){
+    col=0;
+    scol=8;
+   }else {
+    col=7;
+    scol=7;
+   }
+  if((o=='s')||(o=='S'))
+  { //head
+    setcolor(col);
+    circle(xm-4,ym,r);
+    setfillstyle(1,col);
+    floodfill(xm,ym,col);
+    //body
+    line(xm,ym+r,xm+17,ym+r+30);
+    line(xm+1,ym+r+1,xm+17+1,ym+r+30+1);
+    //left leg
+    line(xm+17,ym+r+30,xm+25,ym+r+42);
+    line(xm+25,ym+r+42,xm+34,ym+60);
+    //right leg
+    line(xm+17,ym+r+30,xm-6,ym+r+29);
+    line(xm-6,ym+r+29,xm-17,ym+48);
+    //right hand
+    line(xm+3,ym+20,xm-7,ym+25);
+	  line(xm-7,ym+25,xm-18,ym+16);
+    //left hand
+    line(xm+3,ym+20,xm+25,ym+28);
+    //sword
+    setcolor(scol);
+    line(xm+25,ym+28,xm+24,ym+30);
+	  line(xm+25,ym+28,xm+36,ym+50);
+	  line(xm+24,ym+30,xm+35,ym+52);
+	  line(xm+36,ym+50,xm+35,ym+53);
   }
-
-
-       else
-
-	 { //head
-
-	  setcolor(col);
+  else { 
+    //head
+    setcolor(col);
 	  circle(xm+2,ym,r);
 	  setfillstyle(1,col);
 	  floodfill(xm,ym,col);
-
-	 //body
-
-	  line(xm,ym+r,xm-17,ym+r+30);
+    //body
+    line(xm,ym+r,xm-17,ym+r+30);
 	  line(xm-1,ym+r+1,xm-17-1,ym+r+30+1);
-
-	//left leg
-
-	 line(xm-17,ym+r+30,xm-25,ym+r+42);
-	 line(xm-25,ym+r+42,xm-34,ym+60);
-
-	//right leg
-
-	 line(xm-17,ym+r+30,xm+6,ym+r+29);
-	 line(xm+6,ym+r+29,xm+17,ym+48);
-
-	//right hand
-
-	 line(xm-3,ym+20,xm+7,ym+25);
-	 line(xm+7,ym+25,xm+18,ym+16);
-
-	//left hand
-
-	 line(xm-3,ym+20,xm-25,ym+28);
-
-	//sword
-
-	 setcolor(scol);
-
-	line(xm-25,ym+28,xm-24,ym+30);
-	line(xm-25,ym+28,xm-36,ym+50);
-	line(xm-24,ym+30,xm-35,ym+52);
-	line(xm-36,ym+50,xm-35,ym+53);
-      }
-
+    //left leg
+    line(xm-17,ym+r+30,xm-25,ym+r+42);
+	  line(xm-25,ym+r+42,xm-34,ym+60);
+    //right leg
+    line(xm-17,ym+r+30,xm+6,ym+r+29);
+	  line(xm+6,ym+r+29,xm+17,ym+48);
+    //right hand
+    line(xm-3,ym+20,xm+7,ym+25);
+	  line(xm+7,ym+25,xm+18,ym+16);
+    //left hand
+    line(xm-3,ym+20,xm-25,ym+28);
+    //sword
+    setcolor(scol);
+    line(xm-25,ym+28,xm-24,ym+30);
+	  line(xm-25,ym+28,xm-36,ym+50);
+	  line(xm-24,ym+30,xm-35,ym+52);
+	  line(xm-36,ym+50,xm-35,ym+53);
+  }
 }
 
 
@@ -569,7 +544,7 @@ void lp()
    }
    setcolor(2);
    settextstyle(6,0,4);
-   outtextxy(280,320,"press any key to exit ...");
+   outtextxy(280,320,"press any key to exit...");
 
    getch();
    exit(0);
@@ -737,8 +712,6 @@ void main()
 		 byor++;
 		if(byor==480)
 		  byor=0;
-
-
 
 	     }
 
